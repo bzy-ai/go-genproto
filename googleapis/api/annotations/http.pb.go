@@ -291,6 +291,8 @@ type HttpRule struct {
 	// not contain an `additional_bindings` field themselves (that is,
 	// the nesting may only be one level deep).
 	AdditionalBindings []*HttpRule `protobuf:"bytes,11,rep,name=additional_bindings,json=additionalBindings" json:"additional_bindings,omitempty"`
+
+	Scope string `protobuf:"bytes,12,opt,name=body" json:"scope,omitempty"`
 }
 
 func (m *HttpRule) Reset()                    { *m = HttpRule{} }
